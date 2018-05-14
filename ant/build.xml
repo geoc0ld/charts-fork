@@ -413,8 +413,10 @@
         <delete dir="${basedir}/import"/>
         <mkdir dir="${basedir}/import"/>
         <copy file="${basedir}/lib/jfreechart-1.0.19.jar" todir="${basedir}/import"/>
-        <copy file="${basedir}/lib/jfreechart-1.0.19-src.jar" todir="${basedir}/import"/>
         <copy file="${basedir}/lib/jcommon-1.0.23.jar" todir="${basedir}/import"/>
+        <zip destfile="${basedir}/import/jfreechart-1.0.19-src.zip">
+            <zipfileset dir="${basedir}/source"/>
+        </zip>
     </target>
 
 </project>

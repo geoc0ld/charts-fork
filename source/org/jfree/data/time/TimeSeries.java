@@ -406,6 +406,8 @@ public class TimeSeries extends Series implements Cloneable, Serializable {
                 Number n = item.getValue();
                 if (n != null) {
                     double v = n.doubleValue();
+                    if(Double.isNaN(v))
+                        continue;
                     lowY = Math.min(lowY, v);
                     highY = Math.max(highY, v);
                 }
